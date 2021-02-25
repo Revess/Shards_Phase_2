@@ -1,0 +1,13 @@
+python main.py --dataset_dir ./data/datasets/ImprovedShardDrawings/240p/ --original_data ./doc/shards/shard_images_png/ --image_shape [240,426] --batch_size 16 --model_name model_240p --train True --create_dataset True
+python main.py --dataset_dir ./data/prediction_data/120p --create_dataset True --image_shape 120 213 3 --original_data ./data/prediction_data/240p/
+python main.py --dataset_dir ./data/prediction_data/120p/ --original_data ./data/prediction_data/120p/ --model_name model_120p --predict True --image_shape 120 213 3 --class_names Beide_140_142_en_133_136 HdP_Test Holwerda_140_142 Holwerda133_136 Houten_Rijsbruggerweg_Test ODJS4_Laten_zitten Pothuizerweg_Laten_Zitten RV_133_136 Undefined_140_142
+
+python main.py --dataset_dir ./output_dir/430x270/ --original_data ./data/prediction_data/120p/ --model_name model_270p --train True --image_shape 480 270 3 --batch_size 4 --epochs 15 --class_names 133-136 140-142 unkown unkown_shards
+python main.py --dataset_dir ./x/ --original_data ./data/prediction_data/120p/ --model_name model_270p --predict True --image_shape 480 270 3 --class_names 133-136 140-142 unkown unkown_shards
+
+python main.py --dataset_dir ./output_dir/430x270/ --original_data ./data/prediction_data/120p/ --model_name model_540p --train True --image_shape 860 540 3 --batch_size 4 --epochs 15 --class_names 133-136 140-142 unkown unkown_shards
+python main.py --dataset_dir ./x/ --original_data ./data/prediction_data/120p/ --model_name model_540p --predict True --image_shape 860 540 3 --class_names 133-136 140-142 unkown unkown_shards
+
+python main.py --dataset_dir ./data/datasets/ImprovedShardDrawings/480p/ --original_data ./doc/shards/shard_images_png/ --image_shape 480 640 3 --batch_size 16 --model_name model_480p --train True
+
+python main.py --dataset_dir ./data/prediction_data/480p/ --original_data ./data/prediction_data/480p/ --model_name model_480p --predict True --image_shape 480 640 3 --class_names Beide_140_142_en_133_136 HdP_Test Holwerda_140_142 Holwerda133_136 Houten_Rijsbruggerweg_Test ODJS4_Laten_zitten Pothuizerweg_Laten_Zitten RV_133_136 Undefined_140_142
